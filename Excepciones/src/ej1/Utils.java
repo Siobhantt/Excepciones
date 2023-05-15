@@ -11,7 +11,7 @@ public class Utils {
 		num = lee.nextDouble();
 		lee.nextLine();
 		}catch(InputMismatchException e){
-			System.out.println(e.getMessage());
+			System.out.println("El numero no es decimal.");
 		} 
 		return num;
 	}
@@ -22,7 +22,7 @@ public class Utils {
 		num = lee.nextInt();
 		lee.nextLine();
 		} catch (InputMismatchException e){
-		System.out.println(e.getMessage());
+		System.out.println("El numero no es entero.");
 		}
 		
 		return num;
