@@ -2,6 +2,6 @@ package ej2;
 
 public class NegativeSecondException extends Exception {
 public String toString() {
-	return "NegativeSecondException";
+	return "No se puede colocar un digito menor a cero";
 }
 }
