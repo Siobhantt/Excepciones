@@ -60,9 +60,11 @@ public class Fecha {
  * Establece el mes introducido en el atributo 
  * @param mes
  */
-	public void setMes(int mes) {
+	public void setMes(int mes) throws ExcepcionMesIncorrecto{
 		if (mes >= 1 && mes <= 12) {
 			this.mes = mes;
+		}else {
+			throw new ExcepcionMesIncorrecto(); 
 		}
 	}
 /**
@@ -76,9 +78,13 @@ public class Fecha {
  * Establece el anio
  * @param anio
  */
-	public void setAnio(int anio) {
+	public void setAnio(int anio) throws ExcepcionAñoIncorrecto {
+		if(anio<1 || anio >12) {
+			throw new ExcepcionAñoIncorrecto();
+		}else {
 		this.anio = anio;
-	}
+		}
+		}
 /**
  * Metodo que compueba si el anio es bisiesto
  * @return
